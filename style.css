@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;  
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.navbar {
+    width: 100%;
+    background-color: orangered;
+    color: black;
+    padding: 15px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar div img {
+  width: 50px;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .navbar-logo h1 {
+    font-size: 35px;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+.navbar .navbar-logo .tec {
+    color: #f3f3f3;
+}
+
+.navbar ul {
+    list-style: none;
+    gap: 25px;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 5px;
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: black;
+}
+
+/* css home - Hero Section */
+.home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.home .isi {
+    /* Peningkatan lebar kotak */
+    padding: 2.5rem 2rem; /* Meningkatkan padding */
+    max-width: 800px; /* Lebarkan kotak ke 800px (sebelumnya 650px) */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+    overflow-x: hidden;
+    white-space: normal;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.isi h1{
+    margin-top: 0;
+    font-size: 3.5rem;
+    color: black;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    white-space: normal;
+    margin-bottom: 20px;
+}
+
+.isi p {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+}
+
+.isi .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff5e00;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.isi .cta:hover {
+    background-color: #e04a00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('WEBSITE LISA STORE 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Tambahkan padding agar tidak terlalu mepet tepi layar di mobile */
+}
+
+.wraper {
+    width: 100%; /* Gunakan 100% lebar untuk responsivitas */
+    max-width: 450px; /* Batasi lebar maksimum */
+    background: rgba(255, 255, 255, 0.15); /* Frosted glass background */
+    border: 1px solid rgba(255, 255, 255, .4); /* Border yang lebih jelas */
+    backdrop-filter: blur(10px); /* Efek blur yang konsisten */
+    -webkit-backdrop-filter: blur(10px);
+    color: black; /* Ubah warna teks utama ke hitam agar kontras */
+    border-radius: 15px; /* Sudut membulat yang konsisten */
+    padding: 40px; /* Padding lebih besar untuk ruang */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Bayangan untuk kedalaman */
+    animation: fadeInScale 0.8s ease-out forwards; /* Animasi masuk */
+    opacity: 0; /* Awalnya tersembunyi */
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.wraper h1 {
+    font-size: 2.8rem; /* Ukuran judul lebih modern */
+    text-align: center;
+    color: black;
+    margin-bottom: 30px; /* Jarak bawah judul */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.wraper .input-box {
+    position: relative; /* Penting untuk penempatan ikon/label di masa depan */
+    width: 100%;
+    height: 50px;
+    margin: 25px 0; /* Jarak antar input field */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Background input lebih transparan */
+    border: 1px solid rgba(255, 255, 255, .5); /* Border input */
+    outline: none;
+    border-radius: 10px; /* Sudut input yang lebih modern */
+    font-size: 1.1rem; /* Ukuran font input lebih besar */
+    color: black; /* Warna teks input */
+    padding: 0 15px; /* Padding dalam input field */
+    transition: all 0.3s ease;
+}
+
+.input-box input::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Warna placeholder lebih gelap */
+}
+
+.input-box input:focus {
+    border-color: orangered; /* Border berubah warna saat fokus */
+    box-shadow: 0 0 8px rgba(255, 94, 0, 0.5); /* Bayangan saat fokus */
+}
+
+.wraper .lupa-pass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pusatkan secara vertikal */
+    font-size: 0.95rem; /* Ukuran font sedikit lebih besar */
+    margin: 20px 0 25px; /* Jarak atas dan bawah */
+    color: black; /* Warna teks checkbox */
+}
+
+.lupa-pass label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Jarak antara checkbox dan teks */
+}
+
+.lupa-pass label input[type="checkbox"] {
+    accent-color: orangered; /* Warna checkbox */
+    width: 16px; /* Ukuran checkbox */
+    height: 16px;
+    cursor: pointer;
+}
+
+.lupa-pass a {
+    color: orangered; /* Warna link lupa password */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.lupa-pass a:hover {
+    text-decoration: underline;
+    color: #e04a00; /* Warna link saat hover */
+}
+
+.wraper .tombol {
+    width: 100%;
+    height: 50px; /* Tinggi tombol lebih besar */
+    background: orangered; /* Warna tombol utama */
+    border: none;
+    outline: none;
+    border-radius: 10px; /* Sudut tombol yang konsisten */
+    cursor: pointer;
+    font-size: 1.2rem; /* Ukuran font tombol lebih besar */
+    font-weight: 600;
+    color: white; /* Warna teks tombol */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+}
+
+.wraper .tombol:hover {
+    background-color: #e04a00; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih intens */
+}
+
+.wraper .link-daftar {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 25px; /* Jarak dari tombol login */
+    color: black; /* Warna teks default */
+}
+
+.link-daftar p a {
+    color: orangered; /* Warna link daftar */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.link-daftar p a:hover {
+    text-decoration: underline;
+    color: #e04a00; /* Warna link saat hover */
+}
+
+.barcode {
+  background-position: center;
+}
+
+.barcode div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Perbaikan untuk QRIS Section */
+.qris {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.qris-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 50px; /* Meningkatkan padding dalam kotak */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 600px; /* Lebar maksimum kotak menjadi 600px (sebelumnya 500px) */
+  width: 90%;
+  animation: scaleIn 0.8s ease-out forwards;
+  opacity: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.qris h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.qris img {
+  max-width: 350px;
+  width: 80%;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.qris img:hover {
+    transform: scale(1.03);
+}
+
+.qris h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* CSS Price List Section */
+.price-container {
+  padding-top: 100px; /* Jarak dari navbar */
+  min-height: calc(100vh - 80px); /* Sesuaikan dengan tinggi navbar */
+  display: grid; /* Menggunakan Grid untuk tata letak kolom */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif, min 300px per kolom */
+  gap: 30px; /* Jarak antar kolom */
+  max-width: 1200px; /* Batasi lebar keseluruhan container */
+  margin: 0 auto; /* Pusatkan container */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 50px; /* Jarak bawah */
+  color: black; /* Warna teks default */
+}
+
+.price-container h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: black;
+  grid-column: 1 / -1; /* Judul mengisi seluruh lebar grid */
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.price-item {
+  background: rgba(255, 255, 255, 0.15); /* Background frosted glass */
+  backdrop-filter: blur(8px); /* Blur lebih konsisten */
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 30px; /* Padding dalam item harga */
+  margin: 0; /* Hapus margin default */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih jelas */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Konten di mulai dari kiri */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.price-item h2 {
+  font-size: 2rem; /* Ukuran judul kategori utama */
+  color: orangered;
+  margin-bottom: 20px;
+  text-align: left; /* Teks judul kiri */
+  width: 100%; /* Memastikan judul mengisi lebar item */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.price-item h3 {
+  font-size: 1.3rem; /* Ukuran sub-judul */
+  color: black;
+  margin-top: 20px; /* Jarak atas untuk sub-judul */
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.price-item ul {
+  list-style: none; /* Hapus bullet default */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.price-item ul li {
+  font-size: 1.1rem; /* Ukuran font item harga */
+  color: black;
+  margin-bottom: 8px; /* Jarak antar item */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.price-item ul li span {
+  font-weight: 600; /* Harga menjadi bold */
+  color: #333; /* Warna harga sedikit berbeda */
+}
+
+.price-item ul li i {
+    color: orangered; /* Warna ikon berlian/bintang */
+    font-size: 0.9em; /* Ukuran ikon */
+}
+
+.price-item .divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1); /* Garis pemisah */
+    margin: 20px 0; /* Jarak atas dan bawah garis */
+}
+
+.price-item .note-section {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1); /* Garis putus-putus untuk catatan */
+}
+
+.price-item .note-section h3 {
+    font-size: 1.1rem;
+    color: orangered;
+    margin-bottom: 10px;
+    text-shadow: none;
+}
+
+.price-item .note-section ul li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.price-item .note-section ul li i {
+    color: #555; /* Warna ikon caret untuk catatan */
+    font-size: 0.8em;
+}
+
+/* Container utama Kontak */
+.contact-container {
+  padding-top: 120px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Judul Kontak */
+.contact-container h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Grid 2 kolom */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Kotak kontak */
+.contact-box {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: orangered;
+    transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box:hover i {
+    transform: scale(1.1);
+    color: rgb(255, 80, 0);
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+  }
+  .navbar .navbar-logo h1 {
+    font-size: 28px;
+  }
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .contact-container {
+    padding-top: 100px;
+  }
+
+  .contact-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .contact-box {
+    width: 100%;
+    font-size: 24px;
+    padding: 25px;
+  }
+
+  .contact-box i {
+      font-size: 40px;
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .navbar-logo h1 {
+    font-size: 24px;
+  }
+  .navbar ul li a {
+    font-size: 14px;
+  }
+  .contact-container h2 {
+    font-size: 28px;
+  }
+  .contact-box {
+    font-size: 22px;
+    padding: 20px;
+  }
+  .contact-box i {
+      font-size: 35px;
+  }
+}
